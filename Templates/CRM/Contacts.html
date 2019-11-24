@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Contacts Template</title>
+</head>
+<body>
+  <!--Tables allow for a more complex structure complete with rows and columns.-->
+  <table>
+    <!--The Table Head contains the top row of the table. -->
+    <thead>
+      <tr>
+        <!--Each th table head element is the title of a column in the table.-->
+        <th>Contact Name</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Company Name</th>
+        <th>Last Contacted</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!--The table body contains all the cells of the table.-->
+      <tr>
+        <!--td or table datum are the individual cells of the table-->
+        <td>William Sampson</td>
+        <td>708-454-2232</td>
+        <td>william@sampson.com</td>
+        <td>Sampson Industries</td>
+        <td>2019-10-01</td>
+      </tr>
+      <!--Each new table row in encompassed in tr with nested td for the cells-->
+      <tr>
+        <td>Phillip Johnson</td>
+        <td>708-334-3665</td>
+        <td>Phil@sampson.com</td>
+        <td>Sampson Industries</td>
+        <td>2019-09-05</td>
+      </tr>
+    </tbody>
+    <!--Table footer tfoot comes after closing the body-->
+    <tfoot>
+      <tr>
+        <!--Create one row for the footer than spans all 5 columns-->
+        <td colspan="5">2 Contacts displayed</td>
+      </tr>
+    </tfoot>
+    <!--Table caption. Can be added anywhere in the table as long as it is a child
+      element of the table tag.-->
+    <caption>Sales leads</caption>
+  </table>
+</body>
+</html>
