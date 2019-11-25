@@ -3,6 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <title>Basic Template</title>
+  <!--CSS can be added to the header in a style element.
+  Selection includes all h1 tags and applys the syling property color red to them.
+  Ideally you should use hex codes for colors-->
+    <!--You can include multiple styling properties in the same selection. You can select multiple tags.
+    Selection includes all h2 and h3 tags and applys color and underline properties as well
+    as specifies the font family, start with Arial, if that's not available use Helvetica,
+    and finally if neither are available in the browser use an sans-serif.-->
+      <!--You can utilize the class attribute to creat a style element. You can then assign
+      these classes in the body. The standard is .camelCase to indiciate a class-->
+        <!--You can utilize an id to create a CSS rule that targets an element. IDs must be
+        unique in the document. The rule default is #cameCase like the #firstPargraph.-->
+  <style>
+    h1{
+      color:red;
+    }
+    h2, h3{
+      color:#0003a1;
+      text-decoration: underline;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .redHeader{
+      color:#eb3434;
+      text-decoration: underline;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #firstPargraph{
+      font-weight: bold;
+    }
+    p:first-of-type{
+      font-weight: bold;
+    }
+    a:hover{
+      color:#068004;
+    }
+    p::first-letter{
+      font-weight: bolder;
+    }
+  </style>
+  <!--With psuedo class selectors you can target the first of type to style the first
+  paragraph even if it happens to change. Or you can target all even rows.
+  Psuedo class selectors always begin with a single or double colon.-->
+    <!--Pseudo classes are also helpful when writing styles based on an elements state.
+    For instance change the color of links to green on hover.-->
+      <!--Pseudo elements can be used to target a portion of an element such as the first letter
+      of a paragraph or the first line.-->
 </head>
 <body>
   <!--The smaller the number the larger the heading size. This is default format in the browser.
@@ -16,7 +61,11 @@
   <!--You can use non-breaking space &nbsp; to add extra white space characters-->
   <h3>This is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a third level <br /> heading</h3>
   <!--The break tag ends the line you are currently on and resumes on the next line. No closing tag required.-->
-  <p>This is the first paragraph</p>
+  <h4 class="redHeader">This is a fourth level heading</h4>
+  <!--style class redHeader is added to the heading. When specifying more than one
+  class you separate them with a space.-->
+  <p id="firstPargraph">This is the first paragraph</p>
+  <!--This is an example of a paragraph with an id.-->
   <!--Text will automatically wrap if it reaches the right side of the browser or the user resizes it will
   be adjusted by a process called browser reflow. You can use wbr to indicate where a good place to
   add a line break in the paragraph would be.-->
@@ -27,5 +76,20 @@
     <!--Cite is an optional child tag in the blockquote. Default browser style is italics.-->
     <cite>Eleanor Roosevelt</cite>
   </blockquote>
+  <!--Hyperlinks reference another html document and when clicked will
+  navigate to that document.-->
+  <p> Please click <a href="One.html">here</a> to view page 1</p>
+  <!--Hyperlinks can be used to point to URLS outside this site.-->
+  <a href="http://www.google.com">Link to Google</a>
+  <!--The img tag can be used to add images to the html page.-->
+  <p>This is an image of a hummingbird feeder
+    <!--src points to the image source. It can be an absolute or relative URL,
+    or be a reference to an image on a different site.-->
+    <!--The most common image types are jpg, png, and gif.-->
+    <img src="birdfeeder.jpg"
+    title="Hummingbird feeder" width="500"></p>
+    <!--The title will display as a tooltip and print text when curser hovers over the image.
+    This will also be announced to screen readers.-->
+    <!--The width attribute specifies width in pixels. If height is not specified it will scale the image appropriately.-->
 </body>
 </html>

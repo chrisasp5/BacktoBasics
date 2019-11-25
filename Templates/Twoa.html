@@ -3,11 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <title>Basic Template</title>
+  <!--Alternatively, you can link to a style sheet that includes css which can be used
+  on all pages across the site.-->
+  <link rel="stylesheet" type="text/css" href="examples.css">
 </head>
 <body>
+  <!--You can specift style properties inline, but this is generally discourage.It will override global properties.
+  The default syntax is property:name; semi colons separate styles.-->
+  <h1 style="color: #888888;font-size:60px;">This is a top level heading</h1>
+  <!--A sequence of white space inside html elements including new lines will be condensed
+  down to a single white space character. -->
+  <h2>This is             a second level
+             heading</h2>
+  <!--You can use non-breaking space &nbsp; to add extra white space characters-->
+  <h3>This is &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a third level <br /> heading</h3>
+  <!--The break tag ends the line you are currently on and resumes on the next line. No closing tag required.-->
+  <h4 class="redHeader">This is a fourth level heading</h4>
+  <!--style class redHeader is added to the heading. When specifying more than one
+  class you separate them with a space.-->
+  <p id="firstPargraph">This is the first paragraph</p>
+  <!--This is an example of a paragraph with an id.-->
+  <!--Text will automatically wrap if it reaches the right side of the browser or the user resizes it will
+  be adjusted by a process called browser reflow. You can use wbr to indicate where a good place to
+  add a line break in the paragraph would be.-->
+  <p>This is the second paragraph</p>
+  <!--blockquote is used to capture quoted text optionally attributed to a source.-->
+  <!--default browser style for blockquote is indented.-->
+  <blockquote>No one can make you feel inferior without your consent.
+    <!--Cite is an optional child tag in the blockquote. Default browser style is italics.-->
+    <cite>Eleanor Roosevelt</cite>
+  </blockquote>
   <!--Hyperlinks reference another html document and when clicked will
   navigate to that document.-->
-  <p> Please click <a href="Two.html">here</a> to view page 2</p>
+  <p> Please click <a href="One.html">here</a> to view page 1</p>
   <!--Hyperlinks can be used to point to URLS outside this site.-->
   <a href="http://www.google.com">Link to Google</a>
   <!--The img tag can be used to add images to the html page.-->

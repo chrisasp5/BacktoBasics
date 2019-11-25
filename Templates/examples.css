@@ -1,0 +1,36 @@
+h1{
+  color:red;
+}
+h2, h3{
+  color:#0003a1;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.redHeader{
+  color:#eb3434;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#firstPargraph{
+  font-weight: bold;
+}
+p:first-of-type{
+  font-weight: bold;
+}
+a:hover{
+  color:#068004;
+}
+p::first-letter{
+  font-weight: bolder;
+}
+/*Inheritence is supported on many, but not all styles. It will be passed down to
+all its decendants.*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*All elements in the body will share the font-family.*/
+blockquote {
+  text-decoration: underline;
+  border: 1px solid black;
+}
+/*The text decorator will be inherited by cite, but the border will not.*/
